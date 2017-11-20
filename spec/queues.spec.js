@@ -2,14 +2,19 @@ const {expect} = require('chai');
 const {createQueue} = require('../queue.js');
 
 describe.only('Queue Data Structure', ()=>{
-  it('add data into the queue and increase its size', ()=>{
-    let queue = createQueue();      
+  it('Returns the size of the queue as zero before anything has been enqueued, and returns the count after and returns 1 when an items has been enetered.', function() {
+    let queue = createQueue();
+    expect(queue.size).to.equal(0);
     queue.enqueue('name');  
-    expect(queue.size).to.equal(1);    
+    expect(queue.size).to.equal(1);
+  
+  });
+  it('add data into the queue and increase its size', ()=>{
+    let queue = createQueue();         
     for(let i =0;i<5;i++){
       queue.enqueue('bob');
     }
-    expect(queue.size).to.equal(6);
+    expect(queue.size).to.equal(5); 
     //console.log(queue);
   });
   it('returns stroage with the given data', ()=>{
