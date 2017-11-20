@@ -1,0 +1,20 @@
+{
+  "name": "stack_and_queue",
+  "version": "1.0.0",
+  "description": "Data Structures",
+  "main": ".eslintrc.js",
+  "scripts": {
+    "test": "mocha spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/najmi-smile/CORE-stacks-and-queues.git"
+  },
+  "author": "TA Raza",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/najmi-smile/CORE-stacks-and-queues/issues"
+  },
+  "homepage": "https://github.com/najmi-smile/CORE-stacks-and-queues#readme",
+  "
+}
