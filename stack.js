@@ -1,4 +1,4 @@
-function createStack(){
+function createStack() {
   const stack = {
     size : 0,
     storage : {},
@@ -7,10 +7,13 @@ function createStack(){
       this.size++;   
     },  // push function
     pop: function(){
-      let deletedItem = this.storage[this.size];
-      delete this.storage[this.size-1];
-      this.size--;
-      return deletedItem;
+      if (Object.keys(this.storage).length > 0){
+        let deletedItem = this.storage[this.size];
+        delete this.storage[this.size-1];
+        this.size--;
+        return deletedItem;
+      }
+      return {};
     }   // pop function  
   };  // stack
   return stack;

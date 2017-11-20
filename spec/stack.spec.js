@@ -37,4 +37,17 @@ describe('Stack Data Structure', ()=>{
     stack.pop();
     expect(Object.keys(stack.storage).length).to.equal(0);
   });
+  it('Returns the deleted item once it has been popped', function() {
+    let stack = createStack();
+    stack.push('Tahir');
+    stack.push('Bob');
+    stack.pop();
+    expect(stack.storage[0]).to.equal('Tahir');
+    stack.pop();
+    expect(Object.keys(stack.storage).length).to.equal(0);
+  }); 
+  it('Returns an error if the storage is empty before something has been popped', function() {
+    let stack = createStack();
+    expect(stack.pop()).to.eql({});
+  });
 });

@@ -16,5 +16,7 @@
     "url": "https://github.com/najmi-smile/CORE-stacks-and-queues/issues"
   },
   "homepage": "https://github.com/najmi-smile/CORE-stacks-and-queues#readme",
-  "
+  "devDependencies": {
+    "mocha": "^4.0.1"
+  }
 }
