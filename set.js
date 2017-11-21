@@ -1,38 +1,32 @@
-function createSet() {
-  const set = {
-    size: 0,
-    storage: {},
-  };
+function CreateSet() {
+  this.storage = {};
 
-  createSet.prototype.add = function () {
-      
-  };
-
-  createSet.prototype.clear = function () {
-     
-  };
-
-  createSet.prototype.delete = function () {
-    
-  };
-
-  createSet.prototype.entries = function () {
-    
-  };
-
-  createSet.prototype.forEach = function () {
-    
-  };
-
-  createSet.prototype.has = function () {
-    
-  };
-
-  createSet.prototype.values = function () {
-    
-  };
-
-  return set;
 }
 
-module.export = {createSet};
+CreateSet.prototype.add = function(property) {
+  this.array.push(property);
+};
+
+  // createSet.prototype.delete = function () {
+    
+  // };
+
+  // createSet.prototype.entries = function () {
+    
+  // };
+
+  // createSet.prototype.forEach = function () {
+    
+  // };
+
+  // createSet.prototype.has = function () {
+    
+  // };
+
+  // createSet.prototype.values = function () {
+    
+  // };
+
+
+
+module.export = {createSet}
