@@ -1,16 +1,16 @@
 const {expect} = require('chai');
-const {createQueue} = require('../queue.js');
+const {CreateQueue} = require('../queue.js');
 
-describe.only('Queue Data Structure', ()=>{
+describe('Queue Data Structure', ()=>{
   it('Returns the size of the queue as zero before anything has been enqueued, and returns the count after and returns 1 when an items has been enetered.', function() {
-    let queue = createQueue();
+    let queue = new CreateQueue();
     expect(queue.size).to.equal(0);
     queue.enqueue('name');  
     expect(queue.size).to.equal(1);
   
   });
   it('add data into the queue and increase its size', ()=>{
-    let queue = createQueue();         
+    let queue = new CreateQueue();         
     for(let i =0;i<5;i++){
       queue.enqueue('bob');
     }
@@ -18,13 +18,13 @@ describe.only('Queue Data Structure', ()=>{
     //console.log(queue);
   });
   it('returns stroage with the given data', ()=>{
-    let queue = createQueue();
+    let queue = new CreateQueue();
     //console.log(queue);
     queue.enqueue('tahir');
     expect(queue.storage[0]).to.equal('tahir');
   });
   it('delete data and decrease the size of queue', ()=>{
-    let queue = createQueue();
+    let queue = new CreateQueue();
     queue.enqueue('tahir');   
     queue.dequeue();  
     expect(queue.size).to.equal(0);    
@@ -36,7 +36,7 @@ describe.only('Queue Data Structure', ()=>{
     //console.log(queue);
   });
   it('Returns the first item of queue if we have deleted one item', function() {
-    let queue = createQueue();
+    let queue = new CreateQueue();
     queue.enqueue('Tahir');
     queue.enqueue('Sally');
     queue.enqueue('Jade');
@@ -46,7 +46,7 @@ describe.only('Queue Data Structure', ()=>{
     expect(queue.dequeue()).to.equal('Tahir');
   }); 
   it('Returns an empty object if the storage is empty before something has been dequeueped', function() {
-    let queue = createQueue();
+    let queue = new CreateQueue();
     expect(queue.dequeue()).to.eql({});
   });
 });
